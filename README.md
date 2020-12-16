@@ -14,7 +14,7 @@ Currently we only support a few entities and per entity only a few actions:
 7.  Event (create, update, delete, get, getById)
 8.  Business types (get)
 9.  Tags (get)
-10. Invoice (get, book, registerPayment)
+10. Invoice (get, book, registerPayment, download, file)
 11. Credit notes (get)
 12. Payment terms (get)
 13. Tax rates (get)
@@ -30,6 +30,7 @@ Currently we only support a few entities and per entity only a few actions:
 23. Productcategories (get)
 24. Products (create, get, getById)
 25. Custom fields (get)
+26. Quotations (get, getById, download, file)
 
 Teamleader API v2 works with OAuth2. This means your application needs to be registered on the [Teamleader Marketplace](https://marketplace.teamleader.eu/nl/nl/ontwikkel/integraties) (you can keep them private though).
 
@@ -73,12 +74,42 @@ $company = $client->company( [
 $dealPhases = $client->dealPhase()->get();
 ```
 
-# TODO
-
-- [ ] Support custom actions on Deals
-- [ ] Add all other Entities
-
 # Change log
+
+## 2.7.0 (2020-11-11)
+[Full change log](https://github.com/janhenkes/teamleader-php-sdk/compare/2.6.0...2.7.0)
+
+- Find invoice by id
+
+## 2.6.0 (2020-09-25)
+[Full change log](https://github.com/janhenkes/teamleader-php-sdk/compare/2.5.1...2.6.0)
+
+Cheers to [@rQwk](https://github.com/rQwk)
+
+- Added Quotations endpoint
+
+## 2.5.1 (2020-06-29)
+[Full change log](https://github.com/janhenkes/teamleader-php-sdk/compare/2.5.0...2.5.1)
+
+- Updated fillables for Invoice entity
+
+## 2.5.0 (2020-06-22)
+[Full change log](https://github.com/janhenkes/teamleader-php-sdk/compare/2.4.0...2.5.0)
+
+Thanks to [@kjellknapen](https://github.com/kjellknapen)
+
+**Features:**
+
+- Added invoice download and file actions
+
+## 2.4.0 (2020-06-08)
+[Full change log](https://github.com/janhenkes/teamleader-php-sdk/compare/2.3.0...2.4.0)
+
+Thanks to [@jurrienpiris](https://github.com/jurrienpiris)
+
+**Features:**
+
+- Added summary to fillable attributes of the Deal entity
 
 ## 2.3.0 (2020-03-15)
 [Full change log](https://github.com/janhenkes/teamleader-php-sdk/compare/2.2.0...2.3.0)
