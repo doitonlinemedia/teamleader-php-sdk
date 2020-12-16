@@ -11,6 +11,7 @@ class TimeTracking extends Model
 {
     use FindAll;
     use FindById;
+    use Storable;
 
     const TYPE = 'timetracking';
 
